@@ -84,7 +84,7 @@
         },
         {
           "uuid": "7cdcba69-e3eb-4d22-a96e-fa228f8ab5ae",
-          "body": "{\n  \"playList\": \"https://m3u.cl/lista/chileiptv.m3u\",\n  \"firstName\": \"User\",\n  \"lastName\": \"Two\"\n}",
+          "body": "{\n  \"playList\": \"https://m3u.cl/lista/CO.m3u\",\n  \"firstName\": \"User\",\n  \"lastName\": \"Two\"\n}",
           "latency": 2000,
           "statusCode": 200,
           "label": "success - user2@mail.com",
