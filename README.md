@@ -1,6 +1,9 @@
 # ios-miptv-mvc
 Miptv app for iOS over MVC architecture
 
+## Minimun deployments
+iOS 15.0
+
 ## Local Server
 - Open mockoon
 - Load mockoon.json
