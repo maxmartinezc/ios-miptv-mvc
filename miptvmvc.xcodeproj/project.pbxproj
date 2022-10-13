@@ -1,0 +1,563 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1829257A27F2110E00E63782 /* LoginRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1829257927F2110E00E63782 /* LoginRequest.swift */; };
+		189DABE128EEC0C100D6029D /* ChannelCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 189DABE028EEC0C100D6029D /* ChannelCellView.swift */; };
+		18A5ED4C28F2863F00570F06 /* Favorite.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18A5ED4B28F2863F00570F06 /* Favorite.swift */; };
+		18ABA84D28229E6100258448 /* RegexHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18ABA84C28229E6100258448 /* RegexHelpers.swift */; };
+		18AF4A2D28EC325100FCFBA9 /* PopUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18AF4A2C28EC325100FCFBA9 /* PopUpViewController.swift */; };
+		18B5357B27E972010053A41E /* LogoutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B5357A27E972010053A41E /* LogoutViewController.swift */; };
+		18B68F1E28EADAC400A0034E /* ApiError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B68F1D28EADAC400A0034E /* ApiError.swift */; };
+		18B7E3D127DE1598002B9A9C /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B7E3D027DE1598002B9A9C /* LoadingView.swift */; };
+		18BA406727F231FC008C289A /* LoginManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18BA406627F231FC008C289A /* LoginManager.swift */; };
+		18BA406E27F236C9008C289A /* LoginResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18BA406D27F236C9008C289A /* LoginResponse.swift */; };
+		18BA407127F23A35008C289A /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18BA407027F23A35008C289A /* UserModel.swift */; };
+		18BFE6AC27E4B76600F5145F /* ContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18BFE6AB27E4B76600F5145F /* ContainerViewController.swift */; };
+		18BFE6AE27E4C27F00F5145F /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18BFE6AD27E4C27F00F5145F /* HomeViewController.swift */; };
+		18C3127327D2938F004319A6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18C3127227D2938F004319A6 /* AppDelegate.swift */; };
+		18C3127527D2938F004319A6 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18C3127427D2938F004319A6 /* SceneDelegate.swift */; };
+		18C3127727D2938F004319A6 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18C3127627D2938F004319A6 /* LoginViewController.swift */; };
+		18C3127C27D29391004319A6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 18C3127B27D29391004319A6 /* Assets.xcassets */; };
+		18C3127F27D29391004319A6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18C3127D27D29391004319A6 /* LaunchScreen.storyboard */; };
+		18C3128C27D29C64004319A6 /* PlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18C3128B27D29C64004319A6 /* PlayerViewController.swift */; };
+		18C96F2628EBEC8200208EAD /* AlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18C96F2528EBEC8200208EAD /* AlertView.swift */; };
+		18CCEB2C27D452660093164D /* ChannelManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18CCEB2B27D452660093164D /* ChannelManager.swift */; };
+		18CCEB3027D45DA60093164D /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18CCEB2F27D45DA60093164D /* Constants.swift */; };
+		18CCEB3227D47AB80093164D /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18CCEB3127D47AB80093164D /* Utils.swift */; };
+		18CCEB3427D47FFA0093164D /* Channel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18CCEB3327D47FFA0093164D /* Channel.swift */; };
+		18DDFED027F3853E00C84138 /* ErrorResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18DDFECF27F3853E00C84138 /* ErrorResponse.swift */; };
+		5515D1721BE10E54098CEB68 /* Pods_miptvmvc.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 69D5658C5AB552C9B9A98A68 /* Pods_miptvmvc.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		1829257927F2110E00E63782 /* LoginRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginRequest.swift; sourceTree = "<group>"; };
+		189DABE028EEC0C100D6029D /* ChannelCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChannelCellView.swift; sourceTree = "<group>"; };
+		18A5ED4B28F2863F00570F06 /* Favorite.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Favorite.swift; sourceTree = "<group>"; };
+		18ABA84C28229E6100258448 /* RegexHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegexHelpers.swift; sourceTree = "<group>"; };
+		18AF4A2C28EC325100FCFBA9 /* PopUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopUpViewController.swift; sourceTree = "<group>"; };
+		18B5357A27E972010053A41E /* LogoutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogoutViewController.swift; sourceTree = "<group>"; };
+		18B68F1D28EADAC400A0034E /* ApiError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiError.swift; sourceTree = "<group>"; };
+		18B7E3D027DE1598002B9A9C /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
+		18BA406627F231FC008C289A /* LoginManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginManager.swift; sourceTree = "<group>"; };
+		18BA406D27F236C9008C289A /* LoginResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginResponse.swift; sourceTree = "<group>"; };
+		18BA407027F23A35008C289A /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
+		18BFE6AB27E4B76600F5145F /* ContainerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContainerViewController.swift; sourceTree = "<group>"; };
+		18BFE6AD27E4C27F00F5145F /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		18C3126F27D2938F004319A6 /* miptvmvc.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = miptvmvc.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		18C3127227D2938F004319A6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		18C3127427D2938F004319A6 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		18C3127627D2938F004319A6 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		18C3127B27D29391004319A6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		18C3127E27D29391004319A6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		18C3128027D29391004319A6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		18C3128B27D29C64004319A6 /* PlayerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerViewController.swift; sourceTree = "<group>"; };
+		18C3128E27D2C20B004319A6 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		18C3129027D2C215004319A6 /* AVKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVKit.framework; path = System/Library/Frameworks/AVKit.framework; sourceTree = SDKROOT; };
+		18C96F2528EBEC8200208EAD /* AlertView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertView.swift; sourceTree = "<group>"; };
+		18CCEB2B27D452660093164D /* ChannelManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChannelManager.swift; sourceTree = "<group>"; };
+		18CCEB2F27D45DA60093164D /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		18CCEB3127D47AB80093164D /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
+		18CCEB3327D47FFA0093164D /* Channel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Channel.swift; sourceTree = "<group>"; };
+		18DDFECF27F3853E00C84138 /* ErrorResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorResponse.swift; sourceTree = "<group>"; };
+		18E7CC5127DBDF8900903414 /* miptvmvc.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = miptvmvc.entitlements; sourceTree = "<group>"; };
+		69D5658C5AB552C9B9A98A68 /* Pods_miptvmvc.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_miptvmvc.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DFA4BD26F4BA35B9A0C6043D /* Pods-miptvmvc.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-miptvmvc.release.xcconfig"; path = "Target Support Files/Pods-miptvmvc/Pods-miptvmvc.release.xcconfig"; sourceTree = "<group>"; };
+		E88882E70B77276AEEB9CBBD /* Pods-miptvmvc.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-miptvmvc.debug.xcconfig"; path = "Target Support Files/Pods-miptvmvc/Pods-miptvmvc.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		18C3126C27D2938F004319A6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5515D1721BE10E54098CEB68 /* Pods_miptvmvc.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		18BA406C27F2366A008C289A /* Auth */ = {
+			isa = PBXGroup;
+			children = (
+				18BA406627F231FC008C289A /* LoginManager.swift */,
+				1829257927F2110E00E63782 /* LoginRequest.swift */,
+				18BA406D27F236C9008C289A /* LoginResponse.swift */,
+				18BA407027F23A35008C289A /* UserModel.swift */,
+			);
+			path = Auth;
+			sourceTree = "<group>";
+		};
+		18BA406F27F2376E008C289A /* Player */ = {
+			isa = PBXGroup;
+			children = (
+				18CCEB2B27D452660093164D /* ChannelManager.swift */,
+				18CCEB3327D47FFA0093164D /* Channel.swift */,
+			);
+			path = Player;
+			sourceTree = "<group>";
+		};
+		18C3126627D2938F004319A6 = {
+			isa = PBXGroup;
+			children = (
+				18C3127127D2938F004319A6 /* miptvmvc */,
+				18C3127027D2938F004319A6 /* Products */,
+				18C3128D27D2C20B004319A6 /* Frameworks */,
+				8109737E4791F3E3044AD785 /* Pods */,
+			);
+			sourceTree = "<group>";
+		};
+		18C3127027D2938F004319A6 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				18C3126F27D2938F004319A6 /* miptvmvc.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		18C3127127D2938F004319A6 /* miptvmvc */ = {
+			isa = PBXGroup;
+			children = (
+				18E7CC5127DBDF8900903414 /* miptvmvc.entitlements */,
+				18C3128627D293B5004319A6 /* Controllers */,
+				18C3128727D293FF004319A6 /* Views */,
+				18C3128827D29415004319A6 /* Models */,
+				18C3127227D2938F004319A6 /* AppDelegate.swift */,
+				18C3127427D2938F004319A6 /* SceneDelegate.swift */,
+				18CCEB2F27D45DA60093164D /* Constants.swift */,
+				18DDFECF27F3853E00C84138 /* ErrorResponse.swift */,
+				18CCEB3127D47AB80093164D /* Utils.swift */,
+				18ABA84C28229E6100258448 /* RegexHelpers.swift */,
+				18B68F1D28EADAC400A0034E /* ApiError.swift */,
+				18C3127B27D29391004319A6 /* Assets.xcassets */,
+				18C3127D27D29391004319A6 /* LaunchScreen.storyboard */,
+				18C3128027D29391004319A6 /* Info.plist */,
+			);
+			path = miptvmvc;
+			sourceTree = "<group>";
+		};
+		18C3128627D293B5004319A6 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				18B5357A27E972010053A41E /* LogoutViewController.swift */,
+				18C3127627D2938F004319A6 /* LoginViewController.swift */,
+				18C3128B27D29C64004319A6 /* PlayerViewController.swift */,
+				18BFE6AB27E4B76600F5145F /* ContainerViewController.swift */,
+				18BFE6AD27E4C27F00F5145F /* HomeViewController.swift */,
+				18AF4A2C28EC325100FCFBA9 /* PopUpViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		18C3128727D293FF004319A6 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				18B7E3D027DE1598002B9A9C /* LoadingView.swift */,
+				18C96F2528EBEC8200208EAD /* AlertView.swift */,
+				189DABE028EEC0C100D6029D /* ChannelCellView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		18C3128827D29415004319A6 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				18BA406F27F2376E008C289A /* Player */,
+				18BA406C27F2366A008C289A /* Auth */,
+				18A5ED4B28F2863F00570F06 /* Favorite.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		18C3128D27D2C20B004319A6 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				18C3129027D2C215004319A6 /* AVKit.framework */,
+				18C3128E27D2C20B004319A6 /* AVFoundation.framework */,
+				69D5658C5AB552C9B9A98A68 /* Pods_miptvmvc.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		8109737E4791F3E3044AD785 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				E88882E70B77276AEEB9CBBD /* Pods-miptvmvc.debug.xcconfig */,
+				DFA4BD26F4BA35B9A0C6043D /* Pods-miptvmvc.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		18C3126E27D2938F004319A6 /* miptvmvc */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 18C3128327D29391004319A6 /* Build configuration list for PBXNativeTarget "miptvmvc" */;
+			buildPhases = (
+				CDC14934241DCA8AC2AC9113 /* [CP] Check Pods Manifest.lock */,
+				18C3126B27D2938F004319A6 /* Sources */,
+				18C3126C27D2938F004319A6 /* Frameworks */,
+				18C3126D27D2938F004319A6 /* Resources */,
+				464998DAAB543C280DE58502 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = miptvmvc;
+			productName = mitvmvc;
+			productReference = 18C3126F27D2938F004319A6 /* miptvmvc.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		18C3126727D2938F004319A6 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1320;
+				LastUpgradeCheck = 1320;
+				TargetAttributes = {
+					18C3126E27D2938F004319A6 = {
+						CreatedOnToolsVersion = 13.2.1;
+					};
+				};
+			};
+			buildConfigurationList = 18C3126A27D2938F004319A6 /* Build configuration list for PBXProject "miptvmvc" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 18C3126627D2938F004319A6;
+			productRefGroup = 18C3127027D2938F004319A6 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				18C3126E27D2938F004319A6 /* miptvmvc */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		18C3126D27D2938F004319A6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				18C3127F27D29391004319A6 /* LaunchScreen.storyboard in Resources */,
+				18C3127C27D29391004319A6 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		464998DAAB543C280DE58502 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-miptvmvc/Pods-miptvmvc-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-miptvmvc/Pods-miptvmvc-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-miptvmvc/Pods-miptvmvc-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CDC14934241DCA8AC2AC9113 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-miptvmvc-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		18C3126B27D2938F004319A6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				18C3127727D2938F004319A6 /* LoginViewController.swift in Sources */,
+				18BA406727F231FC008C289A /* LoginManager.swift in Sources */,
+				18BFE6AC27E4B76600F5145F /* ContainerViewController.swift in Sources */,
+				18B5357B27E972010053A41E /* LogoutViewController.swift in Sources */,
+				18CCEB3227D47AB80093164D /* Utils.swift in Sources */,
+				18B7E3D127DE1598002B9A9C /* LoadingView.swift in Sources */,
+				18BFE6AE27E4C27F00F5145F /* HomeViewController.swift in Sources */,
+				18AF4A2D28EC325100FCFBA9 /* PopUpViewController.swift in Sources */,
+				18C3128C27D29C64004319A6 /* PlayerViewController.swift in Sources */,
+				18C3127327D2938F004319A6 /* AppDelegate.swift in Sources */,
+				18A5ED4C28F2863F00570F06 /* Favorite.swift in Sources */,
+				1829257A27F2110E00E63782 /* LoginRequest.swift in Sources */,
+				18CCEB2C27D452660093164D /* ChannelManager.swift in Sources */,
+				18CCEB3427D47FFA0093164D /* Channel.swift in Sources */,
+				18B68F1E28EADAC400A0034E /* ApiError.swift in Sources */,
+				18C96F2628EBEC8200208EAD /* AlertView.swift in Sources */,
+				18C3127527D2938F004319A6 /* SceneDelegate.swift in Sources */,
+				18BA406E27F236C9008C289A /* LoginResponse.swift in Sources */,
+				18DDFED027F3853E00C84138 /* ErrorResponse.swift in Sources */,
+				18BA407127F23A35008C289A /* UserModel.swift in Sources */,
+				18CCEB3027D45DA60093164D /* Constants.swift in Sources */,
+				18ABA84D28229E6100258448 /* RegexHelpers.swift in Sources */,
+				189DABE128EEC0C100D6029D /* ChannelCellView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		18C3127D27D29391004319A6 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				18C3127E27D29391004319A6 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		18C3128127D29391004319A6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		18C3128227D29391004319A6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		18C3128427D29391004319A6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E88882E70B77276AEEB9CBBD /* Pods-miptvmvc.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = miptvmvc/miptvmvc.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 4B4KX3C8U3;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = miptvmvc/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = MiPTV;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIRequiresFullScreen = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = cl.maxmartinezc.miptvmvc;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SUPPORTS_MACCATALYST = NO;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		18C3128527D29391004319A6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = DFA4BD26F4BA35B9A0C6043D /* Pods-miptvmvc.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = miptvmvc/miptvmvc.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 4B4KX3C8U3;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = miptvmvc/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = MiPTV;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIRequiresFullScreen = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = cl.maxmartinezc.miptvmvc;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SUPPORTS_MACCATALYST = NO;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		18C3126A27D2938F004319A6 /* Build configuration list for PBXProject "miptvmvc" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				18C3128127D29391004319A6 /* Debug */,
+				18C3128227D29391004319A6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		18C3128327D29391004319A6 /* Build configuration list for PBXNativeTarget "miptvmvc" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				18C3128427D29391004319A6 /* Debug */,
+				18C3128527D29391004319A6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 18C3126727D2938F004319A6 /* Project object */;
+}

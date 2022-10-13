@@ -1,0 +1,170 @@
+{
+  "uuid": "afc322f3-5415-4f01-9bac-47ce6ba7fbe1",
+  "lastMigration": 19,
+  "name": "Miptv",
+  "endpointPrefix": "miptv",
+  "latency": 0,
+  "port": 3001,
+  "hostname": "0.0.0.0",
+  "routes": [
+    {
+      "uuid": "f0148d0e-180c-4cc0-8f64-e53930d4f2ba",
+      "documentation": "User login",
+      "method": "post",
+      "endpoint": "auth/login",
+      "responses": [
+        {
+          "uuid": "8eb7af1d-71cb-4c9d-8649-d5a9983eaf00",
+          "body": "{\n   \"code\": \"401\",\n   \"error\": \"USER_OR_PASSWORD_NOT_VALID\",\n   \"message\": \"User or password not valid\"\n}",
+          "latency": 2000,
+          "statusCode": 400,
+          "label": "User or password not valid",
+          "headers": [],
+          "filePath": "",
+          "sendFileAsBody": false,
+          "rules": [
+            {
+              "target": "body",
+              "modifier": "password",
+              "value": "^(?!.*123456).*$",
+              "operator": "regex"
+            }
+          ],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false
+        },
+        {
+          "uuid": "57a6910a-7fe0-46e3-b530-c3192be9bf3d",
+          "body": "{\n   \"code\": \"100\",\n    \"error\": \"SCHEMA_NOT_VALID\",\n    \"message\": \"Bad request\"\n}",
+          "latency": 1000,
+          "statusCode": 400,
+          "label": "Bad request",
+          "headers": [],
+          "filePath": "",
+          "sendFileAsBody": false,
+          "rules": [
+            {
+              "target": "body",
+              "modifier": "username",
+              "value": "user4@mail.com",
+              "operator": "equals"
+            }
+          ],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false
+        },
+        {
+          "uuid": "12866da0-2284-46f6-9e7d-8bb60fd2ce85",
+          "body": "{\n  \"playList\": \"https://m3u.cl/lista/chileiptv.m3u\",\n  \"firstName\": \"User\",\n  \"lastName\": \"One\"\n}",
+          "latency": 2000,
+          "statusCode": 200,
+          "label": "success - user1@mail.com",
+          "headers": [],
+          "filePath": "",
+          "sendFileAsBody": false,
+          "rules": [
+            {
+              "target": "body",
+              "modifier": "username",
+              "value": "user1@mail.com",
+              "operator": "equals"
+            },
+            {
+              "target": "body",
+              "modifier": "password",
+              "value": "123456",
+              "operator": "equals"
+            }
+          ],
+          "rulesOperator": "AND",
+          "disableTemplating": false,
+          "fallbackTo404": false
+        },
+        {
+          "uuid": "7cdcba69-e3eb-4d22-a96e-fa228f8ab5ae",
+          "body": "{\n  \"playList\": \"https://m3u.cl/lista/chileiptv.m3u\",\n  \"firstName\": \"User\",\n  \"lastName\": \"Two\"\n}",
+          "latency": 2000,
+          "statusCode": 200,
+          "label": "success - user2@mail.com",
+          "headers": [],
+          "filePath": "",
+          "sendFileAsBody": false,
+          "rules": [
+            {
+              "target": "body",
+              "modifier": "username",
+              "value": "user2@mail.com",
+              "operator": "equals"
+            },
+            {
+              "target": "body",
+              "modifier": "password",
+              "value": "123456",
+              "operator": "equals"
+            }
+          ],
+          "rulesOperator": "AND",
+          "disableTemplating": false,
+          "fallbackTo404": false
+        },
+        {
+          "uuid": "266a33f7-8d70-4863-8280-a12cb59158de",
+          "body": "{\n  \"code\": \"500\",\n  \"error\": \"INTERNAL_SERVER_ERROR\",\n  \"message\": \"Unknow Error please try later...\"\n}",
+          "latency": 5000,
+          "statusCode": 500,
+          "label": "Internal Server Error - user3@mail.com",
+          "headers": [],
+          "filePath": "",
+          "sendFileAsBody": false,
+          "rules": [
+            {
+              "target": "body",
+              "modifier": "username",
+              "value": "user3@mail.com",
+              "operator": "equals"
+            }
+          ],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false
+        }
+      ],
+      "enabled": true,
+      "randomResponse": false,
+      "sequentialResponse": false
+    }
+  ],
+  "proxyMode": false,
+  "proxyHost": "",
+  "proxyRemovePrefix": false,
+  "tlsOptions": {
+    "enabled": false,
+    "type": "CERT",
+    "pfxPath": "",
+    "certPath": "",
+    "keyPath": "",
+    "caPath": "",
+    "passphrase": ""
+  },
+  "cors": true,
+  "headers": [
+    {
+      "key": "Content-Type",
+      "value": "application/json"
+    }
+  ],
+  "proxyReqHeaders": [
+    {
+      "key": "",
+      "value": ""
+    }
+  ],
+  "proxyResHeaders": [
+    {
+      "key": "",
+      "value": ""
+    }
+  ]
+}
