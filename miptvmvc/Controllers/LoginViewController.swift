@@ -26,7 +26,7 @@ class LoginViewController: UIViewController {
     private let loginLabel: UILabel = {
         let label = UILabel()
         label.textAlignment = .center
-        label.text = "Log in"
+        label.text = "Sign in"
         label.textColor = K.Colors.title
         label.font = .systemFont(ofSize: 24, weight: .semibold)
         label.translatesAutoresizingMaskIntoConstraints = false
@@ -85,7 +85,7 @@ class LoginViewController: UIViewController {
     
     private let loginButton : UIButton = {
         let button = UIButton()
-        button.setTitle("Continue", for: .normal)
+        button.setTitle("Sign in", for: .normal)
         button.setTitleColor(.white, for: .normal)
         button.translatesAutoresizingMaskIntoConstraints = false
         button.backgroundColor = K.Colors.button
