@@ -18,3 +18,4 @@ The available users bellow:
 
 * All users has the password: *123456*
 
+TV Logo credits by: <a href="https://www.vecteezy.com/free-vector/tv-logo" target="_blank">Tv Logo Vectors by Vecteezy</a>
