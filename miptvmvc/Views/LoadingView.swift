@@ -17,7 +17,7 @@ class LoadingView: UIView {
         
     override init(frame: CGRect) {
         super.init(frame: frame)
-        self.backgroundColor = K.Colors.background.withAlphaComponent(0.6)
+        self.backgroundColor = K.Colors.loadingBackground
         addSubview(spinninCircleView)
         setupView()
     }
@@ -31,12 +31,11 @@ class LoadingView: UIView {
                         
             spinninCircleView.centerXAnchor.constraint(equalTo: self.centerXAnchor),
             spinninCircleView.centerYAnchor.constraint(equalTo: self.centerYAnchor),
-            spinninCircleView.widthAnchor.constraint(equalToConstant: 100),
-            spinninCircleView.heightAnchor.constraint(equalToConstant: 100),
+            spinninCircleView.widthAnchor.constraint(equalToConstant: K.Loading.spinninCircleViewWidthAnchor),
+            spinninCircleView.heightAnchor.constraint(equalToConstant: K.Loading.spinninCircleViewHeightAnchor),
             
         ])
     }
-
 }
 
 class SpinninCircleView: UIView {
@@ -52,25 +51,25 @@ class SpinninCircleView: UIView {
     }
 
     private func configure() {
-        frame = CGRect(x: 0, y: 0, width: 100, height: 100)
+        frame = CGRect(x: K.Loading.spinningCircleFrameX, y: K.Loading.spinningCircleFrameY, width: K.Loading.spinningCircleFrameWidth, height: K.Loading.spinningCircleFrameHeight)
         let rect = self.bounds
         let circularPath = UIBezierPath(ovalIn: rect)
         
         spinningCircle.path = circularPath.cgPath
         spinningCircle.fillColor = UIColor.clear.cgColor
         spinningCircle.strokeColor = UIColor.systemRed.cgColor
-        spinningCircle.lineWidth = 10
-        spinningCircle.strokeEnd = 0.25
+        spinningCircle.lineWidth = K.Loading.spinningCircleLineWidth
+        spinningCircle.strokeEnd = K.Loading.spinningCircleStrokeEnd
         spinningCircle.lineCap = .round
         self.layer.addSublayer(spinningCircle)
-        
     }
+    
     func animate() {
-        UIView.animate(withDuration: 1, delay: 0, options: .curveLinear, animations: {
+        UIView.animate(withDuration: K.Loading.spinningCircleAnimationDuration, delay: K.Loading.spinningCircleAnimationDelay, options: .curveLinear, animations: {
             self.transform = CGAffineTransform(rotationAngle: .pi)
         }) { (completed) in
-            UIView.animate(withDuration: 1, delay: 0, options: .curveLinear, animations: {
-                self.transform = CGAffineTransform(rotationAngle: 0)
+            UIView.animate(withDuration: K.Loading.spinningCircleAnimationDuration, delay: K.Loading.spinningCircleAnimationDelay, options: .curveLinear, animations: {
+                self.transform = CGAffineTransform(rotationAngle: K.Loading.spinningCircleRotationAngle)
             }) { (completed) in
                 self.animate()
             }
@@ -78,6 +77,7 @@ class SpinninCircleView: UIView {
     }
 }
 
+// MARK: - UIVIEW
 extension UIView {
     func showLoading() {
         let loadingView = LoadingView(frame: frame)

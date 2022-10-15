@@ -28,7 +28,7 @@ class LoginViewController: UIViewController {
         label.textAlignment = .center
         label.text = "Sign in"
         label.textColor = K.Colors.title
-        label.font = .systemFont(ofSize: 24, weight: .semibold)
+        label.font = K.Login.labelTitleFont
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
     }()
@@ -36,15 +36,14 @@ class LoginViewController: UIViewController {
     private let userField: UITextField = {
         let field = UITextField()
         field.placeholder = "User"
-        field.layer.borderWidth = 1
         field.layer.borderColor = UIColor.black.cgColor
         field.backgroundColor = .white
         field.autocapitalizationType = .none
         field.leftViewMode = .always
-        field.leftView = UIView(frame: CGRect(x: 0, y: 0, width: 5, height: 0))
+        field.leftView = UIView(frame: CGRect(x: K.Login.textFieldLeftViewX, y: K.Login.textFieldLeftViewY, width: K.Login.textFieldLeftViewWidth, height: K.Login.textFieldLeftViewHeight))
         field.translatesAutoresizingMaskIntoConstraints = false
-        field.layer.cornerRadius = 12
-        field.layer.borderWidth = 1
+        field.layer.cornerRadius = K.Login.textFieldCornerRadius
+        field.layer.borderWidth = K.Login.textFieldBorderWidth
         return field
     }()
     
@@ -52,14 +51,13 @@ class LoginViewController: UIViewController {
         let field = UITextField()
         field.placeholder = "Password"
         field.isSecureTextEntry = true
-        field.layer.borderWidth = 1
         field.layer.borderColor = UIColor.black.cgColor
         field.backgroundColor = .white
         field.leftViewMode = .always
-        field.leftView = UIView(frame: CGRect(x: 0, y: 0, width: 5, height: 0))
+        field.leftView = UIView(frame: CGRect(x: K.Login.textFieldLeftViewX, y: K.Login.textFieldLeftViewY, width: K.Login.textFieldLeftViewWidth, height: K.Login.textFieldLeftViewHeight))
         field.translatesAutoresizingMaskIntoConstraints = false
-        field.layer.cornerRadius = 12
-        field.layer.borderWidth = 1
+        field.layer.cornerRadius = K.Login.textFieldCornerRadius
+        field.layer.borderWidth = K.Login.textFieldBorderWidth
         return field
     }()
 
@@ -68,7 +66,7 @@ class LoginViewController: UIViewController {
         label.translatesAutoresizingMaskIntoConstraints = false
         label.isHidden = true
         label.text = "Please enter valid email"
-        label.font = .systemFont(ofSize: 10, weight: .semibold)
+        label.font = K.Login.labelErrorFont
         label.textColor = K.Colors.title
         return label
     }()
@@ -78,7 +76,7 @@ class LoginViewController: UIViewController {
         label.translatesAutoresizingMaskIntoConstraints = false
         label.isHidden = true
         label.text = "Please enter a password of 6 characters"
-        label.font = .systemFont(ofSize: 10, weight: .semibold)
+        label.font = K.Login.labelErrorFont
         label.textColor = K.Colors.title
         return label
     }()
@@ -89,8 +87,8 @@ class LoginViewController: UIViewController {
         button.setTitleColor(.white, for: .normal)
         button.translatesAutoresizingMaskIntoConstraints = false
         button.backgroundColor = K.Colors.button
-        button.layer.cornerRadius = 12
-        button.layer.borderWidth = 1
+        button.layer.cornerRadius = K.Login.buttonCornerRadius
+        button.layer.borderWidth = K.Login.buttonBorderWidth
         return button
     }()
     
@@ -98,7 +96,7 @@ class LoginViewController: UIViewController {
         let stack = UIStackView()
         stack.axis = .vertical
         stack.translatesAutoresizingMaskIntoConstraints = false
-        stack.spacing = 10
+        stack.spacing = K.Login.hStackSpacing
         stack.distribution = .fillProportionally
         return stack
     }()
@@ -137,23 +135,23 @@ class LoginViewController: UIViewController {
         
         NSLayoutConstraint.activate([
             appLogoImageView.centerXAnchor.constraint(equalTo: view.centerXAnchor),
-            appLogoImageView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 10),
-            appLogoImageView.widthAnchor.constraint(equalToConstant: 250),
-            appLogoImageView.heightAnchor.constraint(equalToConstant: 250),
+            appLogoImageView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: K.Login.appLogoImageViewTopAnchor),
+            appLogoImageView.widthAnchor.constraint(equalToConstant: K.Login.appLogoImageViewWidthAnchor),
+            appLogoImageView.heightAnchor.constraint(equalToConstant: K.Login.appLogoImageViewHeightAnchor),
             
             loginLabel.centerXAnchor.constraint(equalTo: view.centerXAnchor),
-            loginLabel.topAnchor.constraint(equalTo: appLogoImageView.bottomAnchor, constant: 15),
-            loginLabel.heightAnchor.constraint(equalToConstant: 30),
+            loginLabel.topAnchor.constraint(equalTo: appLogoImageView.bottomAnchor, constant: K.Login.loginLabelTopAnchor),
+            loginLabel.heightAnchor.constraint(equalToConstant: K.Login.loginLabelHeightAnchor),
             
-            hStackView.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: 20),
-            hStackView.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: -20),
-            hStackView.topAnchor.constraint(equalTo: loginLabel.bottomAnchor, constant: 10),
+            hStackView.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: K.Login.hStackViewLeadingAnchor),
+            hStackView.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: K.Login.hStackViewTrailingAnchor),
+            hStackView.topAnchor.constraint(equalTo: loginLabel.bottomAnchor, constant: K.Login.hStackViewTopAnchor),
     
-            userField.heightAnchor.constraint(equalToConstant: 50),
-            passwordField.heightAnchor.constraint(equalToConstant: 50),
-            loginButton.heightAnchor.constraint(equalToConstant: 60),
-            userLabelError.heightAnchor.constraint(equalToConstant: 10),
-            passwordLabelError.heightAnchor.constraint(equalToConstant: 10)
+            userField.heightAnchor.constraint(equalToConstant: K.Login.userFieldHeightAnchor),
+            passwordField.heightAnchor.constraint(equalToConstant: K.Login.passwordFieldHeightAnchor),
+            loginButton.heightAnchor.constraint(equalToConstant: K.Login.loginButtonHeightAnchor),
+            userLabelError.heightAnchor.constraint(equalToConstant: K.Login.userLabelErrorHeightAnchor),
+            passwordLabelError.heightAnchor.constraint(equalToConstant: K.Login.passwordLabelErrorHeightAnchor)
             
         ])
     }

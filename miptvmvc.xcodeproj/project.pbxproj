@@ -26,7 +26,6 @@
 		18C3127C27D29391004319A6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 18C3127B27D29391004319A6 /* Assets.xcassets */; };
 		18C3127F27D29391004319A6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18C3127D27D29391004319A6 /* LaunchScreen.storyboard */; };
 		18C3128C27D29C64004319A6 /* PlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18C3128B27D29C64004319A6 /* PlayerViewController.swift */; };
-		18C96F2628EBEC8200208EAD /* AlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18C96F2528EBEC8200208EAD /* AlertView.swift */; };
 		18CBC9C128FA27F100C06A9E /* signin-screen.png in Resources */ = {isa = PBXBuildFile; fileRef = 18CBC9BD28FA27F000C06A9E /* signin-screen.png */; };
 		18CBC9C228FA27F100C06A9E /* watching-screen.png in Resources */ = {isa = PBXBuildFile; fileRef = 18CBC9BE28FA27F000C06A9E /* watching-screen.png */; };
 		18CBC9C328FA27F100C06A9E /* about-screen.png in Resources */ = {isa = PBXBuildFile; fileRef = 18CBC9BF28FA27F000C06A9E /* about-screen.png */; };
@@ -63,7 +62,6 @@
 		18C3128B27D29C64004319A6 /* PlayerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerViewController.swift; sourceTree = "<group>"; };
 		18C3128E27D2C20B004319A6 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		18C3129027D2C215004319A6 /* AVKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVKit.framework; path = System/Library/Frameworks/AVKit.framework; sourceTree = SDKROOT; };
-		18C96F2528EBEC8200208EAD /* AlertView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertView.swift; sourceTree = "<group>"; };
 		18CBC9BD28FA27F000C06A9E /* signin-screen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "signin-screen.png"; sourceTree = "<group>"; };
 		18CBC9BE28FA27F000C06A9E /* watching-screen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "watching-screen.png"; sourceTree = "<group>"; };
 		18CBC9BF28FA27F000C06A9E /* about-screen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "about-screen.png"; sourceTree = "<group>"; };
@@ -168,7 +166,6 @@
 			isa = PBXGroup;
 			children = (
 				18B7E3D027DE1598002B9A9C /* LoadingView.swift */,
-				18C96F2528EBEC8200208EAD /* AlertView.swift */,
 				189DABE028EEC0C100D6029D /* ChannelCellView.swift */,
 			);
 			path = Views;
@@ -347,7 +344,6 @@
 				18CCEB2C27D452660093164D /* ChannelManager.swift in Sources */,
 				18CCEB3427D47FFA0093164D /* Channel.swift in Sources */,
 				18B68F1E28EADAC400A0034E /* ApiError.swift in Sources */,
-				18C96F2628EBEC8200208EAD /* AlertView.swift in Sources */,
 				18C3127527D2938F004319A6 /* SceneDelegate.swift in Sources */,
 				18BA406E27F236C9008C289A /* LoginResponse.swift in Sources */,
 				18DDFED027F3853E00C84138 /* ErrorResponse.swift in Sources */,

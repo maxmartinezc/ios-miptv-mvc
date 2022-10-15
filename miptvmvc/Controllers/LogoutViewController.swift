@@ -22,15 +22,13 @@ class LogoutViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         self.navigationController?.setNavigationBarHidden(true, animated: false)
-        // put GA mark event
         didUserLogout()
         self.view.showLoading()
     }
     
     private func didUserLogout() {
-        //remover los datos del usuario
-        print("before DispatchQueue")
         Utils.setUserPlayList(url: nil)
+        Utils.setLastPlayedChannel(row: nil)
         DispatchQueue.main.async {
             self.view.hideLoading()
             print("didUserLogout")

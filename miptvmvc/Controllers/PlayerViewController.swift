@@ -37,7 +37,7 @@ class PlayerViewController: UIViewController {
     private let controllersView: UIView = {
         let view = UIView()
         view.translatesAutoresizingMaskIntoConstraints = false
-        view.backgroundColor = UIColor.black.withAlphaComponent(0.7)
+        view.backgroundColor = K.Colors.playerControllersBackground
         return view
     }()
     
@@ -56,8 +56,8 @@ class PlayerViewController: UIViewController {
     var unFilteredChannels = [ChannelItem]()
     
     var timer = Timer()
-    var secondsPassed = 0
-    let totalTime = 10
+    var secondsPassed = K.Player.timerInitialSeconds
+    let totalTime = K.Player.timerInactiveTime
     
     var lastPlayedChannel = IndexPath()
     var playListUrl = String()
@@ -83,7 +83,7 @@ class PlayerViewController: UIViewController {
         
         let gesture = UITapGestureRecognizer(target: self, action:  #selector(self.checkAction))
         gesture.delegate = self
-        gesture.numberOfTapsRequired = 1
+        gesture.numberOfTapsRequired = K.Player.gestureNumberOfTapsRequired
         view.addGestureRecognizer(gesture)
         
         controllersView.addSubview(channelTableView)
@@ -159,7 +159,7 @@ class PlayerViewController: UIViewController {
         constraints.append(playerView.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor))
         
         constraints.append(controllersView.heightAnchor.constraint(equalTo: view.heightAnchor))
-        constraints.append(controllersView.widthAnchor.constraint(equalTo: view.widthAnchor, multiplier: 0.35))
+        constraints.append(controllersView.widthAnchor.constraint(equalTo: view.widthAnchor, multiplier: K.Player.controllersViewSizeMultiplier))
         
         constraints.append(channelTableView.topAnchor.constraint(equalTo: controllersView.topAnchor))
         constraints.append(channelTableView.bottomAnchor.constraint(equalTo: controllersView.bottomAnchor))
@@ -200,8 +200,8 @@ class PlayerViewController: UIViewController {
     
     private func startTimer() {
         timer.invalidate()
-        secondsPassed = 0
-        timer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(updateTimer), userInfo: nil, repeats: true)
+        secondsPassed = K.Player.timerInitialSeconds
+        timer = Timer.scheduledTimer(timeInterval: K.Player.timerTimeInterval, target: self, selector: #selector(updateTimer), userInfo: nil, repeats: true)
     }
     
     private func stopTimer() {
@@ -288,10 +288,11 @@ extension PlayerViewController: UITableViewDelegate {
     }
 }
 
+//MARK: - UIGestureRecognizerDelegate
+
 extension PlayerViewController: UIGestureRecognizerDelegate {
     func gestureRecognizer(_ gestureRecognizer: UIGestureRecognizer, shouldReceive touch: UITouch) -> Bool {
         let isControllTapped = touch.view?.isDescendant(of: self.channelTableView)
         return !isControllTapped!
     }
 }
-

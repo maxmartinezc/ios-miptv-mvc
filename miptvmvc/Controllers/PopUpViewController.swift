@@ -6,6 +6,12 @@
 //
 
 import UIKit
+enum AlertTypes: String {
+    case error
+    case info
+    case warning
+}
+
 class PopUpViewController: UIViewController {
     private let alertType: AlertTypes
     private let alertTitle: String?
@@ -15,15 +21,15 @@ class PopUpViewController: UIViewController {
         let view = UIView()
         view.translatesAutoresizingMaskIntoConstraints = false
         view.backgroundColor = K.Colors.alertContentBackground
-        view.layer.cornerRadius = 12
-        view.layer.borderWidth = 1
+        view.layer.cornerRadius = K.Popup.viewCornerRadius
+        view.layer.borderWidth = K.Popup.viewBorderWidth
         return view
     }()
     
     private let titleLabel: UILabel = {
         let label = UILabel()
         label.textColor = K.Colors.alertTitle
-        label.font = .systemFont(ofSize: 20, weight: .semibold)
+        label.font = K.Popup.labelTitleFont
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
     }()
@@ -32,10 +38,10 @@ class PopUpViewController: UIViewController {
         let label = UILabel()
         label.textAlignment = .center
         label.textColor = K.Colors.alertMessage
-        label.font = .systemFont(ofSize: 14, weight: .regular)
+        label.font = K.Popup.labelMessageFont
         label.translatesAutoresizingMaskIntoConstraints = false
         label.lineBreakMode = .byWordWrapping
-        label.numberOfLines = 0
+        label.numberOfLines = K.Popup.labelMessageNumberOfLines
         return label
     }()
     
@@ -44,14 +50,14 @@ class PopUpViewController: UIViewController {
         button.setTitleColor(.white, for: .normal)
         button.translatesAutoresizingMaskIntoConstraints = false
         button.backgroundColor = K.Colors.button
-        button.layer.cornerRadius = 12
-        button.layer.borderWidth = 1
+        button.layer.cornerRadius = K.Popup.buttonCornerRadius
+        button.layer.borderWidth = K.Popup.buttonBorderWidth
         return button
     }()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.view.backgroundColor = K.Colors.alertBackground.withAlphaComponent(0.8)
+        self.view.backgroundColor = K.Colors.alertBackground
         button.addTarget(self, action: #selector(buttonPressed), for: .touchUpInside)
         contentView.addSubview(titleLabel)
         contentView.addSubview(messageLabel)
@@ -90,7 +96,7 @@ class PopUpViewController: UIViewController {
     
     func setAnimation() {
         self.contentView.transform = CGAffineTransform(translationX: 0, y: self.view.frame.height)
-        UIView.animate(withDuration: 0.25, animations: {
+        UIView.animate(withDuration: K.Popup.animationDuration, animations: {
             self.contentView.transform = .identity
         })
     }
@@ -100,24 +106,24 @@ class PopUpViewController: UIViewController {
             
             contentView.centerXAnchor.constraint(equalTo: self.view.centerXAnchor),
             contentView.centerYAnchor.constraint(equalTo: self.view.centerYAnchor),
-            contentView.widthAnchor.constraint(equalTo: messageLabel.widthAnchor, constant: 50),
-            contentView.bottomAnchor.constraint(equalTo: button.bottomAnchor, constant: 20),
+            contentView.widthAnchor.constraint(equalTo: messageLabel.widthAnchor, constant: K.Popup.contentViewWidthAnchor),
+            contentView.bottomAnchor.constraint(equalTo: button.bottomAnchor, constant: K.Popup.contentViewBottomAnchor),
             
-            titleLabel.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 10),
+            titleLabel.topAnchor.constraint(equalTo: contentView.topAnchor, constant: K.Popup.titleLabelTopAnchor),
             titleLabel.centerXAnchor.constraint(equalTo: contentView.centerXAnchor),
             
-            messageLabel.topAnchor.constraint(equalTo: titleLabel.topAnchor, constant: 50),
+            messageLabel.topAnchor.constraint(equalTo: titleLabel.topAnchor, constant: K.Popup.messageLabelTopAnchor),
             messageLabel.centerXAnchor.constraint(equalTo: contentView.centerXAnchor),
             
-            button.topAnchor.constraint(equalTo: messageLabel.bottomAnchor, constant: 20),
+            button.topAnchor.constraint(equalTo: messageLabel.bottomAnchor, constant: K.Popup.buttonTopAnchor),
             button.centerXAnchor.constraint(equalTo: contentView.centerXAnchor),
-            button.widthAnchor.constraint(equalToConstant: 100)
+            button.widthAnchor.constraint(equalToConstant: K.Popup.buttonWidthAnchor)
         ])
     }
     
     @objc private func buttonPressed() {
         self.contentView.transform = .identity
-        UIView.animate(withDuration: 0.25, animations: {
+        UIView.animate(withDuration: K.Popup.animationDuration, animations: {
             self.contentView.transform = CGAffineTransform(translationX: 0, y: self.view.frame.height)
         }) { (complete) in
             self.view.removeFromSuperview()
