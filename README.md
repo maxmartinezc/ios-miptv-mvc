@@ -1,8 +1,26 @@
-# ios-miptv-mvc
-Miptv app for iOS over MVC architecture
+# Miptv
+| Sigin  | Watching | Channels  | About |
+| ------ | -------- | --------- | ----- |
+|<img src="https://github.com/maxmartinezc/ios-miptv-mvc/blob/master/Docs/signin-screen.png" width="250" heigth="250"/>|<img src="https://github.com/maxmartinezc/ios-miptv-mvc/blob/master/Docs/watching-screen.png" width="350" heigth="350"/>|<img src="https://github.com/maxmartinezc/ios-miptv-mvc/blob/master/Docs/channel-list-screen.png" width="350" heigth="350"/>|<img src="https://github.com/maxmartinezc/ios-miptv-mvc/blob/master/Docs/about-screen.png" width="350" heigth="350"/>|
+
+
+Miptv application to watching iptv from m3u list
+
+# Features
+- User signin
+- Play m3u list
+- Last played channel
+- Switch channels
+
+# Architecture
+- MVC
+- Swift 5
+- No Storyboard, no XIB.
+- URLSession
+- Cocoapods
 
 ## Minimun deployments
-iOS 15.0
+- iOS 15.0
 
 ## Local Server
 - Open mockoon
