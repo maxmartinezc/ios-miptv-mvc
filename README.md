@@ -29,10 +29,10 @@ Miptv application to watching iptv from m3u list
 
 ## Login
 The available users bellow:
-- user1@mail.com (Success - http status 200 - iptv example list 1)
-- user2@mail.com (Success - http status 200 - iptv example list 2)
+- user1@mail.com (Success - http status 200 - example m3u list 1)
+- user2@mail.com (Success - http status 200 - example m3u list 2)
 - user3@mail.com (Internal Server Error - http status 500)
-- user4@mail.com (bad request - http status 400)
+- user4@mail.com (Bad request - http status 400)
 
 * All users has the password: *123456*
 
