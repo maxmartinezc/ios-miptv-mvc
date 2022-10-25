@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import FirebaseAnalytics
 
 protocol LogoutViewControllerDelegate: AnyObject {
     func didUserLogout()
@@ -27,11 +28,15 @@ class LogoutViewController: UIViewController {
     }
     
     private func didUserLogout() {
+        Analytics.logEvent(K.TagManager.Logout.varName, parameters: [
+            K.TagManager.CommonEventParameter.username: Utils.getUsername()!
+        ])
+        
         Utils.setUserPlayList(url: nil)
         Utils.setLastPlayedChannel(row: nil)
+        Utils.setUsername(username: nil)
+        self.view.hideLoading()
         DispatchQueue.main.async {
-            self.view.hideLoading()
-            print("didUserLogout")
             self.delegate?.didUserLogout()
         }
     }
