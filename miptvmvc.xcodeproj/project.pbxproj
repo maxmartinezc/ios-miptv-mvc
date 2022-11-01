@@ -8,11 +8,15 @@
 
 /* Begin PBXBuildFile section */
 		1829257A27F2110E00E63782 /* LoginRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1829257927F2110E00E63782 /* LoginRequest.swift */; };
+		1850E46F2910F3E400CEDAE2 /* ga-screen.png in Resources */ = {isa = PBXBuildFile; fileRef = 1850E46E2910F3E400CEDAE2 /* ga-screen.png */; };
+		1850E4712910F41600CEDAE2 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 1850E4702910F41600CEDAE2 /* README.md */; };
 		189DABE128EEC0C100D6029D /* ChannelCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 189DABE028EEC0C100D6029D /* ChannelCellView.swift */; };
 		18A5ED4C28F2863F00570F06 /* Favorite.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18A5ED4B28F2863F00570F06 /* Favorite.swift */; };
 		18ABA84D28229E6100258448 /* RegexHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18ABA84C28229E6100258448 /* RegexHelpers.swift */; };
 		18AF4A2D28EC325100FCFBA9 /* PopUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18AF4A2C28EC325100FCFBA9 /* PopUpViewController.swift */; };
 		18B5357B27E972010053A41E /* LogoutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B5357A27E972010053A41E /* LogoutViewController.swift */; };
+		18B55EB829024A2800785048 /* container in Resources */ = {isa = PBXBuildFile; fileRef = 18B55EB729024A2800785048 /* container */; };
+		18B55EBA2902586D00785048 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 18B55EB92902586D00785048 /* GoogleService-Info.plist */; };
 		18B68F1E28EADAC400A0034E /* ApiError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B68F1D28EADAC400A0034E /* ApiError.swift */; };
 		18B7E3D127DE1598002B9A9C /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B7E3D027DE1598002B9A9C /* LoadingView.swift */; };
 		18BA406727F231FC008C289A /* LoginManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18BA406627F231FC008C289A /* LoginManager.swift */; };
@@ -40,11 +44,15 @@
 
 /* Begin PBXFileReference section */
 		1829257927F2110E00E63782 /* LoginRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginRequest.swift; sourceTree = "<group>"; };
+		1850E46E2910F3E400CEDAE2 /* ga-screen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ga-screen.png"; sourceTree = "<group>"; };
+		1850E4702910F41600CEDAE2 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		189DABE028EEC0C100D6029D /* ChannelCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChannelCellView.swift; sourceTree = "<group>"; };
 		18A5ED4B28F2863F00570F06 /* Favorite.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Favorite.swift; sourceTree = "<group>"; };
 		18ABA84C28229E6100258448 /* RegexHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegexHelpers.swift; sourceTree = "<group>"; };
 		18AF4A2C28EC325100FCFBA9 /* PopUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopUpViewController.swift; sourceTree = "<group>"; };
 		18B5357A27E972010053A41E /* LogoutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogoutViewController.swift; sourceTree = "<group>"; };
+		18B55EB729024A2800785048 /* container */ = {isa = PBXFileReference; lastKnownFileType = folder; path = container; sourceTree = "<group>"; };
+		18B55EB92902586D00785048 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		18B68F1D28EADAC400A0034E /* ApiError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiError.swift; sourceTree = "<group>"; };
 		18B7E3D027DE1598002B9A9C /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
 		18BA406627F231FC008C289A /* LoginManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginManager.swift; sourceTree = "<group>"; };
@@ -112,6 +120,8 @@
 		18C3126627D2938F004319A6 = {
 			isa = PBXGroup;
 			children = (
+				1850E4702910F41600CEDAE2 /* README.md */,
+				18B55EB729024A2800785048 /* container */,
 				18CBC9BC28FA27D400C06A9E /* Docs */,
 				18C3127127D2938F004319A6 /* miptvmvc */,
 				18C3127027D2938F004319A6 /* Products */,
@@ -144,6 +154,7 @@
 				18B68F1D28EADAC400A0034E /* ApiError.swift */,
 				18C3127B27D29391004319A6 /* Assets.xcassets */,
 				18C3127D27D29391004319A6 /* LaunchScreen.storyboard */,
+				18B55EB92902586D00785048 /* GoogleService-Info.plist */,
 				18C3128027D29391004319A6 /* Info.plist */,
 			);
 			path = miptvmvc;
@@ -194,6 +205,7 @@
 		18CBC9BC28FA27D400C06A9E /* Docs */ = {
 			isa = PBXGroup;
 			children = (
+				1850E46E2910F3E400CEDAE2 /* ga-screen.png */,
 				18CBC9BD28FA27F000C06A9E /* signin-screen.png */,
 				18CBC9BE28FA27F000C06A9E /* watching-screen.png */,
 				18CBC9C028FA27F100C06A9E /* channel-list-screen.png */,
@@ -223,6 +235,7 @@
 				18C3126C27D2938F004319A6 /* Frameworks */,
 				18C3126D27D2938F004319A6 /* Resources */,
 				464998DAAB543C280DE58502 /* [CP] Embed Pods Frameworks */,
+				6EE2AE7E1135F46927EFEB91 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -272,9 +285,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				18CBC9C228FA27F100C06A9E /* watching-screen.png in Resources */,
+				1850E46F2910F3E400CEDAE2 /* ga-screen.png in Resources */,
+				1850E4712910F41600CEDAE2 /* README.md in Resources */,
+				18B55EBA2902586D00785048 /* GoogleService-Info.plist in Resources */,
 				18CBC9C128FA27F100C06A9E /* signin-screen.png in Resources */,
 				18CBC9C428FA27F100C06A9E /* channel-list-screen.png in Resources */,
 				18CBC9C328FA27F100C06A9E /* about-screen.png in Resources */,
+				18B55EB829024A2800785048 /* container in Resources */,
 				18C3127F27D29391004319A6 /* LaunchScreen.storyboard in Resources */,
 				18C3127C27D29391004319A6 /* Assets.xcassets in Resources */,
 			);
@@ -298,6 +315,23 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-miptvmvc/Pods-miptvmvc-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6EE2AE7E1135F46927EFEB91 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-miptvmvc/Pods-miptvmvc-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-miptvmvc/Pods-miptvmvc-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-miptvmvc/Pods-miptvmvc-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		CDC14934241DCA8AC2AC9113 /* [CP] Check Pods Manifest.lock */ = {
@@ -493,7 +527,7 @@
 				CODE_SIGN_ENTITLEMENTS = miptvmvc/miptvmvc.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_TEAM = 4B4KX3C8U3;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = miptvmvc/Info.plist;
@@ -509,7 +543,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 1.1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = cl.maxmartinezc.miptvmvc;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -529,7 +563,7 @@
 				CODE_SIGN_ENTITLEMENTS = miptvmvc/miptvmvc.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_TEAM = 4B4KX3C8U3;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = miptvmvc/Info.plist;
@@ -545,7 +579,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 1.1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = cl.maxmartinezc.miptvmvc;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";

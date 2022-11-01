@@ -7,5 +7,6 @@ target 'miptvmvc' do
 
   pod 'Kingfisher', '~> 7.0'
   pod 'IQKeyboardManagerSwift'
-
+  pod 'GoogleTagManager', '~> 6.0'
+  Firebase/Analytics
 end

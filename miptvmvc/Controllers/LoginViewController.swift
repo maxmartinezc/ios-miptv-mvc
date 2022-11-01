@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import FirebaseAnalytics
 
 protocol LoginViewControllerDelegate: AnyObject {
     func didUserLogin()
@@ -36,8 +37,9 @@ class LoginViewController: UIViewController {
     private let userField: UITextField = {
         let field = UITextField()
         field.placeholder = "User"
-        field.layer.borderColor = UIColor.black.cgColor
-        field.backgroundColor = .white
+        field.textColor = K.Colors.textFieldTextColor
+        field.layer.borderColor = K.Colors.textFieldBorderColor
+        field.backgroundColor = K.Colors.textFieldBackgroundColor
         field.autocapitalizationType = .none
         field.leftViewMode = .always
         field.leftView = UIView(frame: CGRect(x: K.Login.textFieldLeftViewX, y: K.Login.textFieldLeftViewY, width: K.Login.textFieldLeftViewWidth, height: K.Login.textFieldLeftViewHeight))
@@ -51,8 +53,9 @@ class LoginViewController: UIViewController {
         let field = UITextField()
         field.placeholder = "Password"
         field.isSecureTextEntry = true
-        field.layer.borderColor = UIColor.black.cgColor
-        field.backgroundColor = .white
+        field.textColor = K.Colors.textFieldTextColor
+        field.layer.borderColor = K.Colors.textFieldBorderColor
+        field.backgroundColor = K.Colors.textFieldBackgroundColor
         field.leftViewMode = .always
         field.leftView = UIView(frame: CGRect(x: K.Login.textFieldLeftViewX, y: K.Login.textFieldLeftViewY, width: K.Login.textFieldLeftViewWidth, height: K.Login.textFieldLeftViewHeight))
         field.translatesAutoresizingMaskIntoConstraints = false
@@ -60,7 +63,7 @@ class LoginViewController: UIViewController {
         field.layer.borderWidth = K.Login.textFieldBorderWidth
         return field
     }()
-
+    
     private let userLabelError: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
@@ -130,7 +133,7 @@ class LoginViewController: UIViewController {
             self.skipLogin()
         }
     }
-        
+    
     private func setupView() {
         
         NSLayoutConstraint.activate([
@@ -146,7 +149,7 @@ class LoginViewController: UIViewController {
             hStackView.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: K.Login.hStackViewLeadingAnchor),
             hStackView.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: K.Login.hStackViewTrailingAnchor),
             hStackView.topAnchor.constraint(equalTo: loginLabel.bottomAnchor, constant: K.Login.hStackViewTopAnchor),
-    
+            
             userField.heightAnchor.constraint(equalToConstant: K.Login.userFieldHeightAnchor),
             passwordField.heightAnchor.constraint(equalToConstant: K.Login.passwordFieldHeightAnchor),
             loginButton.heightAnchor.constraint(equalToConstant: K.Login.loginButtonHeightAnchor),
@@ -155,7 +158,7 @@ class LoginViewController: UIViewController {
             
         ])
     }
-
+    
     @objc private func loginButtonPressed(){
         
         let user = userField.text!
@@ -170,15 +173,15 @@ class LoginViewController: UIViewController {
         if !isValidEmail {
             self.userLabelError.isHidden = false
         }
-
+        
         if !isValidPassword {
             self.passwordLabelError.isHidden = false
         }
         
         if(isValidEmail && isValidPassword) {
-        
+            
             self.view.showLoading()
-        
+            
             loginManager.login(user: user, password: password)
         }
     }
@@ -189,14 +192,29 @@ class LoginViewController: UIViewController {
     
     private func skipLogin() {
         view.showLoading()
+        
         DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+            Analytics.logEvent(K.TagManager.SignIn.varName, parameters: [
+                K.TagManager.CommonEventParameter.username: Utils.getUsername()!
+            ])
             self.view.hideLoading()
             self.delegate?.didUserLogin()
         }
     }
     
-    private func didUserLogin() {
-        self.delegate?.didUserLogin()
+    private func didUserLogin(userData: UserModel) {
+        DispatchQueue.main.async {
+            let username = self.userField.text!
+            Analytics.logEvent(K.TagManager.SignIn.varName, parameters: [
+                K.TagManager.CommonEventParameter.username: username
+            ])
+            
+            Utils.setUserPlayList(url: userData.playListUrl)
+            Utils.setUsername(username: username)
+            
+            self.view.hideLoading()
+            self.delegate?.didUserLogin()
+        }
     }
 }
 
@@ -204,11 +222,7 @@ class LoginViewController: UIViewController {
 
 extension LoginViewController: LoginManagerDelegate {
     func didUpdateLogin(_ loginManager: LoginManager, userData: UserModel) {
-        DispatchQueue.main.async {
-            self.view.hideLoading()
-            Utils.setUserPlayList(url: userData.playListUrl)
-            self.didUserLogin()
-        }
+        self.didUserLogin(userData: userData)
     }
     
     func didFailWithError(error: Error) {

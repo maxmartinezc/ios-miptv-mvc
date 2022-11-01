@@ -1,8 +1,7 @@
 # Miptv
-| Sigin  | Watching | Channels  | About |
-| ------ | -------- | --------- | ----- |
-|<img src="https://github.com/maxmartinezc/ios-miptv-mvc/blob/master/Docs/signin-screen.png" width="250" heigth="250"/>|<img src="https://github.com/maxmartinezc/ios-miptv-mvc/blob/master/Docs/watching-screen.png" width="350" heigth="350"/>|<img src="https://github.com/maxmartinezc/ios-miptv-mvc/blob/master/Docs/channel-list-screen.png" width="350" heigth="350"/>|<img src="https://github.com/maxmartinezc/ios-miptv-mvc/blob/master/Docs/about-screen.png" width="350" heigth="350"/>|
-
+| Sigin  | Watching | Channels  | About | TagManager |
+| ------ | -------- | --------- | ----- | ---------- |
+|<img src="https://github.com/maxmartinezc/ios-miptv-mvc/blob/master/Docs/signin-screen.png" width="250" heigth="250"/>|<img src="https://github.com/maxmartinezc/ios-miptv-mvc/blob/master/Docs/watching-screen.png" width="350" heigth="350"/>|<img src="https://github.com/maxmartinezc/ios-miptv-mvc/blob/master/Docs/channel-list-screen.png" width="350" heigth="350"/>|<img src="https://github.com/maxmartinezc/ios-miptv-mvc/blob/master/Docs/about-screen.png" width="350" heigth="350"/>|<img src="https://github.com/maxmartinezc/ios-miptv-mvc/blob/master/Docs/ga-screen.png" width="350" heigth="350"/>|
 
 Miptv application to watching iptv from m3u list
 
@@ -11,6 +10,7 @@ Miptv application to watching iptv from m3u list
 - Play m3u list
 - Last played channel
 - Switch channels
+- Firebase/TagManager
 
 # Architecture
 - MVC

@@ -40,6 +40,27 @@ struct K {
         static let favoriteList = "favoriteList"
     }
     
+    struct TagManager {
+        struct SignIn {
+            static let varName = "sign_in"
+        }
+        
+        struct Logout {
+            static let varName = "logout"
+        }
+        
+        struct PlayContent {
+            static let varName = "play_content"
+            struct eventParameter {
+                static let channel = "channel"
+            }
+        }
+        
+        struct CommonEventParameter {
+            static let username = "username"
+        }
+    }
+    
     struct Login {
         static let labelTitleFont = UIFont.systemFont(ofSize: 24, weight: .semibold)
         static let labelErrorFont = UIFont.systemFont(ofSize: 10, weight: .semibold)
@@ -159,5 +180,9 @@ struct K {
         static let defaultChannelBoxBackground = UIColor.clear
         
         static let playerControllersBackground = UIColor.black.withAlphaComponent(0.7)
+        
+        static let textFieldBorderColor = UIColor.black.cgColor
+        static let textFieldTextColor = UIColor.black
+        static let textFieldBackgroundColor = UIColor.white
     }
 }

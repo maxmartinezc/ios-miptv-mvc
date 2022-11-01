@@ -7,6 +7,7 @@
 
 import UIKit
 import AVFoundation
+import FirebaseAnalytics
 
 class PlayerViewController: UIViewController {
     
@@ -210,12 +211,19 @@ class PlayerViewController: UIViewController {
     }
     
     private func playContent(indexPath: IndexPath) {
-        let ch = self.channels[indexPath.row]
-        self.player.pause()
-        self.player.replaceCurrentItem(with: AVPlayerItem(url: URL(string: ch.url)!))
-        self.player.play()
-        lastPlayedChannel = indexPath
-        Utils.setLastPlayedChannel(row: lastPlayedChannel.row)
+        if lastPlayedChannel != indexPath {
+            let ch = self.channels[indexPath.row]
+            self.player.pause()
+            self.player.replaceCurrentItem(with: AVPlayerItem(url: URL(string: ch.url)!))
+            self.player.play()
+            lastPlayedChannel = indexPath
+            Utils.setLastPlayedChannel(row: lastPlayedChannel.row)
+            
+            Analytics.logEvent(K.TagManager.PlayContent.varName, parameters: [
+                K.TagManager.PlayContent.eventParameter.channel: ch.name,
+                K.TagManager.CommonEventParameter.username: Utils.getUsername()!
+            ])
+        }
     }
     
     private func stopContent(){
