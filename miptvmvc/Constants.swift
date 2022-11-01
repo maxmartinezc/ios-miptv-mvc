@@ -180,5 +180,9 @@ struct K {
         static let defaultChannelBoxBackground = UIColor.clear
         
         static let playerControllersBackground = UIColor.black.withAlphaComponent(0.7)
+        
+        static let textFieldBorderColor = UIColor.black.cgColor
+        static let textFieldTextColor = UIColor.black
+        static let textFieldBackgroundColor = UIColor.white
     }
 }

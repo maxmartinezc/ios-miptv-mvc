@@ -37,8 +37,9 @@ class LoginViewController: UIViewController {
     private let userField: UITextField = {
         let field = UITextField()
         field.placeholder = "User"
-        field.layer.borderColor = UIColor.black.cgColor
-        field.backgroundColor = .white
+        field.textColor = K.Colors.textFieldTextColor
+        field.layer.borderColor = K.Colors.textFieldBorderColor
+        field.backgroundColor = K.Colors.textFieldBackgroundColor
         field.autocapitalizationType = .none
         field.leftViewMode = .always
         field.leftView = UIView(frame: CGRect(x: K.Login.textFieldLeftViewX, y: K.Login.textFieldLeftViewY, width: K.Login.textFieldLeftViewWidth, height: K.Login.textFieldLeftViewHeight))
@@ -52,8 +53,9 @@ class LoginViewController: UIViewController {
         let field = UITextField()
         field.placeholder = "Password"
         field.isSecureTextEntry = true
-        field.layer.borderColor = UIColor.black.cgColor
-        field.backgroundColor = .white
+        field.textColor = K.Colors.textFieldTextColor
+        field.layer.borderColor = K.Colors.textFieldBorderColor
+        field.backgroundColor = K.Colors.textFieldBackgroundColor
         field.leftViewMode = .always
         field.leftView = UIView(frame: CGRect(x: K.Login.textFieldLeftViewX, y: K.Login.textFieldLeftViewY, width: K.Login.textFieldLeftViewWidth, height: K.Login.textFieldLeftViewHeight))
         field.translatesAutoresizingMaskIntoConstraints = false
@@ -224,8 +226,8 @@ extension LoginViewController: LoginManagerDelegate {
     }
     
     func didFailWithError(error: Error) {
-        self.view.hideLoading()
         DispatchQueue.main.async {
+            self.view.hideLoading()
             let popUpController = PopUpViewController(message: error.localizedDescription, type: .error, title: nil)
             self.addChild(popUpController)
             self.view.addSubview(popUpController.view)
